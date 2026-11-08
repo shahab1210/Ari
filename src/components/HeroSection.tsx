@@ -3,6 +3,7 @@
 import React from 'react';
 import { MessageCircle, Mail } from 'lucide-react';
 import { siteData, type MetricItem } from '@/content/site-data';
+import { trackConversion } from '@/lib/analytics';
 
 function Linkedin({ className }: { className?: string }) {
   return (
@@ -109,9 +110,10 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
                 <InstagramIcon className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/918828087472"
+                href={siteData.profile.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackConversion('click_whatsapp', { location: 'hero' })}
                 aria-label="WhatsApp Contact"
                 className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-[#C5A880] hover:text-[#C5A880] text-[#A1A1A6] transition-colors"
               >
@@ -137,7 +139,8 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
               </button>
               <a
                 href="/assets/Arifa_Shaikh_CV.pdf"
-                download
+                download="Arifa_Shaikh_CV.pdf"
+                onClick={() => trackConversion('download_cv', { location: 'hero' })}
                 className="px-8 py-3.5 rounded-full border border-white/15 text-[#F4F1EE] font-medium text-sm hover:border-[#C5A880] hover:text-[#C5A880] transition-colors"
               >
                 Download CV

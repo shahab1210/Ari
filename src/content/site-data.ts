@@ -33,7 +33,7 @@ export const siteData = {
     email: "arifaanjum143@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/arifa-shaikh-9955a8254/",
     instagramUrl: "https://www.instagram.com/arifa_08_01/",
-    whatsappUrl: "https://wa.me/918828087472",
+    whatsappUrl: "https://wa.me/918828087472?text=Hi%20Arifa,%20I%20reviewed%20your%20closing%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20project/executive%20opportunity",
     whatsappNumber: "918828087472",
     cvPath: "/assets/Arifa_Shaikh_CV.pdf",
     portraitPath: "/assets/arifa-portrait.jpg",

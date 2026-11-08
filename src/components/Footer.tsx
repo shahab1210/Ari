@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { trackConversion } from '@/lib/analytics';
 
 export interface FooterProps {
   onOpenContact: () => void;
@@ -13,6 +14,7 @@ interface FooterLink {
   target?: string;
   rel?: string;
   download?: boolean | string;
+  onClick?: () => void;
 }
 
 const footerLinks: FooterLink[] = [
@@ -32,12 +34,14 @@ const footerLinks: FooterLink[] = [
     label: 'EXECUTIVE DOSSIER',
     href: '/assets/Arifa_Shaikh_CV.pdf',
     download: 'Arifa_Shaikh_CV.pdf',
+    onClick: () => trackConversion('download_cv', { location: 'footer' }),
   },
   {
     label: 'WHATSAPP',
-    href: 'https://wa.me/918828087472',
+    href: 'https://wa.me/918828087472?text=Hi%20Arifa,%20I%20reviewed%20your%20closing%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20project/executive%20opportunity',
     target: '_blank',
     rel: 'noopener noreferrer',
+    onClick: () => trackConversion('click_whatsapp', { location: 'footer' }),
   },
   {
     label: 'EMAIL',
@@ -58,7 +62,7 @@ export function Footer({ onOpenContact, className = '' }: FooterProps) {
 
   return (
     <footer
-      className={`w-full bg-transparent border-t border-white/5 py-12 px-6 ${className}`}
+      className={`w-full bg-transparent border-t border-white/5 pt-12 pb-28 md:pb-12 px-6 pb-[calc(7rem+env(safe-area-inset-bottom))] md:pb-12 ${className}`}
       aria-label="Site Footer"
     >
       <div className="max-w-7xl mx-auto">
@@ -88,6 +92,7 @@ export function Footer({ onOpenContact, className = '' }: FooterProps) {
                 target={link.target}
                 rel={link.rel}
                 download={link.download}
+                onClick={link.onClick}
                 className="text-xs font-mono uppercase tracking-[0.2em] text-[#636366] hover:text-[#C5A880] transition-colors"
               >
                 {link.label}
@@ -95,7 +100,7 @@ export function Footer({ onOpenContact, className = '' }: FooterProps) {
             ))}
           </nav>
 
-          {/* Right: button onClick={onOpenContact} in text-xs font-mono uppercase tracking-[0.2em] text-[#636366] hover:text-[#C5A880] transition-colors */}
+          {/* Right: button onClick={onOpenContact} */}
           <div className="flex-shrink-0">
             <button
               type="button"
