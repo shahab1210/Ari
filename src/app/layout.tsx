@@ -22,7 +22,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arifashaikh.com"),
+  metadataBase: new URL("https://arifa-olive.vercel.app"),
   title: {
     default: "Arifa Shaikh | Closing Manager - Real Estate & Luxury Interiors (Mumbai, Thane, Mumbra)",
     template: "%s | Arifa Shaikh - Closing Manager",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Arifa Shaikh | Top Closing Manager in Mumbai & Thane",
     description:
       "Proven Closing Manager specializing in high-ticket real estate and luxury interior design sales closures across Mumbai, Thane, and Mumbra.",
-    url: "https://arifashaikh.com",
+    url: "https://arifa-olive.vercel.app",
     siteName: "Arifa Shaikh Portfolio",
     locale: "en_IN",
     images: [

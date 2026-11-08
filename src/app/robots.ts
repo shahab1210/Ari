@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://arifashaikh.com/sitemap.xml",
+    sitemap: "https://arifa-olive.vercel.app/sitemap.xml",
   };
 }

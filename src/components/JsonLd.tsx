@@ -6,7 +6,7 @@ export function JsonLd() {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://arifashaikh.com/#person",
+        "@id": "https://arifa-olive.vercel.app/#person",
         "name": "Arifa Shaikh",
         "alternateName": [
           "Arifa Shaikh Anjum",
@@ -15,8 +15,8 @@ export function JsonLd() {
         ],
         "jobTitle": "Closing Manager",
         "description": "High-performing Closing Manager specializing in Mumbai, Thane, and Mumbra real estate transactions and turnkey interior design contracts.",
-        "image": "https://arifashaikh.com/assets/arifa-portrait.jpg",
-        "url": "https://arifashaikh.com",
+        "image": "https://arifa-olive.vercel.app/assets/arifa-portrait.jpg",
+        "url": "https://arifa-olive.vercel.app",
         "telephone": "+91-8828087472",
         "email": "arifaanjum143@gmail.com",
         "address": {
@@ -60,10 +60,10 @@ export function JsonLd() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://arifashaikh.com/#website",
-        "url": "https://arifashaikh.com",
+        "@id": "https://arifa-olive.vercel.app/#website",
+        "url": "https://arifa-olive.vercel.app",
         "name": "Arifa Shaikh Portfolio",
-        "publisher": { "@id": "https://arifashaikh.com/#person" }
+        "publisher": { "@id": "https://arifa-olive.vercel.app/#person" }
       }
     ]
   };
