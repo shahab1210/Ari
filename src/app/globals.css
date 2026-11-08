@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════════
+   DESIGN SYSTEM — ARIFA SHAIKH EXECUTIVE PORTFOLIO
+   Luxury Dark-Mode Palette: Champagne Bronze + Deep Obsidian
+   ═══════════════════════════════════════════════════════ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-canvas: #0A0A0E;
+  --bg-surface-elevated: #13131A;
+  --bg-surface-card: #1A1A24;
+  --accent-champagne: #C5A880;
+  --accent-champagne-light: #E6CA9E;
+  --accent-terracotta: #C87D55;
+  --text-heading: #F4F1EE;
+  --text-body: #A1A1A6;
+  --text-muted: #636366;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(197, 168, 128, 0.40);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg-canvas);
+  --color-foreground: var(--text-heading);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Global Base ───────────────────────────────────────── */
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-heading);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent-champagne);
+  color: var(--bg-canvas);
+}
+
+/* ── Smooth Scroll ─────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Framer-Grade Typographic Gradient Masks ───────────── */
+.framer-gradient-text {
+  background-image: linear-gradient(227deg, rgb(142, 142, 147) 0%, rgb(244, 241, 238) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.champagne-gradient-text {
+  background-image: linear-gradient(135deg, #E6CA9E 0%, #C5A880 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Specular Image Masking for Skyline Panorama ──────── */
+.skyline-mask {
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* ── Halo Pulse Animation ──────────────────────────────── */
+@keyframes haloPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.45;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-halo {
+  animation: haloPulse 6s ease-in-out infinite;
+}
+
+/* ── Placeholder Metric Indicator (Dev Only) ──────────── */
+.placeholder-indicator::after {
+  content: "⬤";
+  position: absolute;
+  top: 2px;
+  right: -8px;
+  font-size: 6px;
+  color: #F59E0B;
+  opacity: 0.7;
+}
+
+/* ── Scrollbar Styling ─────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-card);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-champagne);
 }

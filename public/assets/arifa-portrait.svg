@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#13131A"/>
+  <circle cx="600" cy="420" r="160" fill="#1A1A24" stroke="#C5A880" stroke-width="2"/>
+  <circle cx="600" cy="420" r="80" fill="#C5A880" opacity="0.15"/>
+  <text x="600" y="440" text-anchor="middle" font-family="sans-serif" font-size="72" fill="#C5A880" opacity="0.8">AS</text>
+  <path d="M400 700 Q450 620 600 600 Q750 620 800 700 Q830 800 830 900 L370 900 Q370 800 400 700Z" fill="#1A1A24" stroke="#C5A880" stroke-width="1" opacity="0.6"/>
+  <text x="600" y="1050" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#636366">Professional Portrait Placeholder</text>
+  <text x="600" y="1090" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#636366">Replace with arifa-portrait.jpg</text>
+</svg>
