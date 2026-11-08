@@ -109,9 +109,12 @@ export function Footer({ onOpenContact, className = '' }: FooterProps) {
         </div>
 
         {/* BOTTOM ROW (mt-8 pt-8 border-t border-white/5) */}
-        <div className="mt-8 pt-8 border-t border-white/5">
+        <div className="mt-8 pt-8 border-t border-white/5 space-y-2">
+          <p className="text-center text-xs text-[#A1A1A6] font-mono tracking-normal leading-relaxed">
+            Byculla, Mumbai • Serving Mumbai, Thane &amp; Mumbra • arifaanjum143@gmail.com • +91 8828087472
+          </p>
           <p className="text-center text-xs text-[#636366] font-mono tracking-normal leading-relaxed">
-            © 2026 ARIFA SHAIKH. CLOSING MANAGER — REAL ESTATE &amp; BESPOKE INTERIORS. BYCULLA, MUMBAI. ALL RIGHTS RESERVED.
+            © 2026 ARIFA SHAIKH (ANJUM). CLOSING MANAGER — REAL ESTATE &amp; BESPOKE INTERIORS. ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>

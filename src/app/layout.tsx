@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Playfair_Display } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
 const inter = Inter({
@@ -21,26 +22,80 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Arifa Shaikh | Closing Manager — Real Estate & Bespoke Interiors",
+  metadataBase: new URL("https://arifashaikh.com"),
+  title: {
+    default: "Arifa Shaikh | Closing Manager - Real Estate & Luxury Interiors (Mumbai, Thane, Mumbra)",
+    template: "%s | Arifa Shaikh - Closing Manager",
+  },
   description:
-    "High-performance Closing Manager specializing in luxury real estate advisory and bespoke turnkey interior contracts in Mumbai. 5+ years of deal-closing expertise across premium property developments and custom interior solutions.",
+    "Arifa Shaikh (Anjum) is a premier Closing Manager in Mumbai, Thane, and Mumbra. Expert in real estate advisory, high-stakes property negotiation, luxury turnkey interior closures, and client relationship management.",
   keywords: [
-    "Arifa Shaikh",
-    "Closing Manager",
-    "Real Estate Mumbai",
-    "Luxury Interiors",
-    "Bonito Designs",
-    "Property Sales",
-    "Turnkey Interiors",
-    "HNWI Advisory",
+    "Arifa Shaikh closing manager",
+    "Best closing manager in thane",
+    "best closing manager in mumbai",
+    "Arifa shaikh",
+    "Arifa Shaikh anjum",
+    "Arifa closing manager",
+    "Arifa shaikh mumbra",
+    "Closing Manager Mumbai",
+    "Real Estate Closing Manager Thane",
+    "Luxury Interior Closing Specialist Mumbai",
+    "Bonito Designs Closing Manager",
+    "The Guardians Real Estate Closing Advisory",
   ],
-  authors: [{ name: "Arifa Shaikh" }],
+  authors: [{ name: "Arifa Shaikh", url: "https://www.linkedin.com/in/arifa-shaikh-9955a8254/" }],
+  creator: "Arifa Shaikh",
+  publisher: "Arifa Shaikh",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Arifa Shaikh | Closing Manager — Real Estate & Bespoke Interiors",
+    type: "profile",
+    firstName: "Arifa",
+    lastName: "Shaikh",
+    username: "arifa_shaikh",
+    gender: "female",
+    title: "Arifa Shaikh | Top Closing Manager in Mumbai & Thane",
     description:
-      "High-performance Closing Manager specializing in luxury real estate advisory and bespoke turnkey interior contracts in Mumbai.",
-    type: "website",
+      "Proven Closing Manager specializing in high-ticket real estate and luxury interior design sales closures across Mumbai, Thane, and Mumbra.",
+    url: "https://arifashaikh.com",
+    siteName: "Arifa Shaikh Portfolio",
     locale: "en_IN",
+    images: [
+      {
+        url: "/assets/arifa-portrait.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arifa Shaikh - Closing Manager Real Estate and Interior Design",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arifa Shaikh | Closing Manager - Mumbai & Thane",
+    description:
+      "Executive portfolio of Arifa Shaikh, specialist in high-value real estate and bespoke interior sales closures across Mumbai, Thane, and Mumbra.",
+    images: ["/assets/arifa-portrait.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "GOOGLE_SEARCH_CONSOLE_VERIFICATION_TOKEN",
+  },
+  other: {
+    "geo.region": "IN-MH",
+    "geo.placename": "Mumbai, Thane, Mumbra",
+    "geo.position": "18.9712;72.8331",
+    ICBM: "18.9712, 72.8331",
   },
 };
 
@@ -51,6 +106,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#0A0A0E] text-[#F4F1EE]">
+        <JsonLd />
         {children}
       </body>
     </html>

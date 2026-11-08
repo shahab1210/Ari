@@ -28,7 +28,7 @@ export const siteData = {
     name: "Arifa Shaikh",
     title: "Closing Manager",
     specialization: "Real Estate Advisory & Bespoke Turnkey Interiors",
-    location: "Byculla, Mumbai - 400011",
+    location: "Byculla, Mumbai - 400011 (Serving Mumbai, Thane & Mumbra)",
     phones: ["+91 8828087472", "+91 8898878068"],
     email: "arifaanjum143@gmail.com",
     linkedinUrl: "https://www.linkedin.com/in/arifa-shaikh-9955a8254/",
@@ -44,8 +44,8 @@ export const siteData = {
   // ── Hero Headline Copy ───────────────────────────────
   hero: {
     eyebrow: "Hi I am",
-    subtitle: "Real Estate Advisory & Bespoke Turnkey Interiors",
-    bio: "Real estate advisory professional and prime interior design closing specialist in Mumbai. Managing end-to-end walk-in conversions, high-stakes commercial negotiations, and cross-functional project onboarding.",
+    subtitle: "Real Estate Advisory & Bespoke Turnkey Interiors • Mumbai, Thane & Mumbra",
+    bio: "Specializing in high-value real estate transaction closures and luxury turnkey interior contracts across Mumbai, Thane, and Mumbra. Managing walk-in consultations and multi-crore deal execution.",
   },
 
   // ── Hero Statistics Bar ──────────────────────────────

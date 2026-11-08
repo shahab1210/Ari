@@ -80,12 +80,12 @@ export function HeroSection({ onOpenContact }: HeroSectionProps) {
 
             {/* 4. Subtitle */}
             <p className="text-lg text-[#A1A1A6]">
-              Real Estate Advisory &amp; Bespoke Turnkey Interiors
+              Real Estate Advisory &amp; Bespoke Turnkey Interiors • Mumbai, Thane &amp; Mumbra
             </p>
 
             {/* 5. Bio paragraph */}
             <p className="text-base md:text-lg text-[#A1A1A6] font-light max-w-xl leading-relaxed">
-              Real estate advisory professional and prime interior design closing specialist in Mumbai. Managing end-to-end walk-in conversions, high-stakes commercial negotiations, and cross-functional project onboarding.
+              Specializing in high-value real estate transaction closures and luxury turnkey interior contracts across Mumbai, Thane, and Mumbra. Managing walk-in consultations and multi-crore deal execution.
             </p>
 
             {/* 6. Social icons row */}
