@@ -89,8 +89,9 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "GOOGLE_SEARCH_CONSOLE_VERIFICATION_TOKEN",
+    google: "P76zUdTUbpnYTMSXNHp8ooVVuL3pzsRMybZ-f3cPUBA",
   },
+
   other: {
     "geo.region": "IN-MH",
     "geo.placename": "Mumbai, Thane, Mumbra",
